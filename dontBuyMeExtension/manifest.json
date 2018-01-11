@@ -1,0 +1,17 @@
+{
+  "name": "Don't Buy Me!",
+  "manifest_version": 2,
+  "version": "0.1",
+  "description": "don't buy stuff",
+  "permissions": ["tabs", "*://*.amazon.com/*"],
+  "content_scripts": [
+    {
+      "css": ["styles.css"],
+      "matches": ["*://www.amazon.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action":{
+    "default_popup":"popup.html"
+  }
+}
