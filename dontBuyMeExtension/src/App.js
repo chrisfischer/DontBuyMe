@@ -67,7 +67,6 @@ class App extends Component {
 	    return (
 	      <div className="App">
 	        <Header />
-			<h3>Your Payment History</h3>
 			<PaymentHistory purchases={this.state.purchases}/>
 	      </div>
 	    );

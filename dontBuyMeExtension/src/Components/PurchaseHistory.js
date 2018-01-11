@@ -15,18 +15,21 @@ class PurchaseHistory extends Component {
 	  	});
 	  }
 
-	  
+
     return (
-      <table className='table'>
-		<tbody>
-			<tr>
-		  		<th>Date</th>
-				<th>Vendor</th>
-				<th>Amount</th>
-			</tr>
-		</tbody>
-		{purchaseHistory}
-	  </table>
+		<div>
+			<h3>Your Payment History</h3>
+	      	<table className='table'>
+				<tbody>
+					<tr>
+				  		<th>Date</th>
+						<th>Vendor</th>
+						<th>Amount</th>
+					</tr>
+				</tbody>
+				{purchaseHistory}
+	  		</table>
+		</div>
     );
   }
 }
