@@ -11,6 +11,9 @@ API - offers a way to pull data from the database:
 
 '''
 
+import operator
+from collections import OrderedDict
+
 from .values import *
 
 from bson.json_util import dumps
@@ -45,7 +48,11 @@ def parse_get(o):
         toReturn = {}
         for d in cursor:
             toReturn[d['date']] = d['balance']
-        return toReturn
+        l = sorted(toReturn.items(), key=operator.itemgetter(0))
+        d = OrderedDict()
+        for t in l:
+            d[t[0]] = t[1]
+        return d
 
     if (field == 'paymentHistory'):
         payments = db['payment-history']
@@ -53,7 +60,11 @@ def parse_get(o):
         toReturn = {}
         for d in cursor:
             toReturn[d['date']] = d['payment']
-        return toReturn
+        l = sorted(toReturn.items(), key=operator.itemgetter(0))
+        d = OrderedDict()
+        for t in l:
+            d[t[0]] = t[1]
+        return d
 
     if (field == 'purchaseHistory'):
         payments = db['purchase-history']
@@ -66,6 +77,7 @@ def parse_get(o):
                 'price': d['price'],
                 'id': str(d['_id'])
             })
+        toReturn.sort(key=lambda d: d['date'], reverse=True)
         return toReturn
 
     if (field == 'skippedHistory'):
@@ -79,7 +91,7 @@ def parse_get(o):
                 'price': d['price'],
                 'id': str(d['_id'])
             })
-        
+        toReturn.sort(key=lambda d: d['date'], reverse=True)
         return toReturn
         
 
