@@ -8,7 +8,6 @@ class PurchaseHistory extends Component {
 	  let purchaseHistory;
 	  if(this.props.purchases) {
 	  	purchaseHistory = this.props.purchases.map(purchase => {
-	  		//console.log(project);
 			return(
 				<Purchase key={purchase.title} purchase={purchase} />
 			);
@@ -17,18 +16,15 @@ class PurchaseHistory extends Component {
 
 
     return (
-		<div>
-			<h3>Your Payment History</h3>
-	      	<table className='table'>
-				<tbody>
-					<tr>
-				  		<th>Date</th>
-						<th>Vendor</th>
-						<th>Amount</th>
-					</tr>
-				</tbody>
-				{purchaseHistory}
-	  		</table>
+		<div className="purchaseHistory-container">
+			<div className="panel panel-default">
+				<div className="panel-heading"><h5>Your Payment History</h5></div>
+		      	<div className="panel-body hold-height">
+					<div className="list-group">
+					{purchaseHistory}
+					</div>
+				</div>
+			</div>
 		</div>
     );
   }

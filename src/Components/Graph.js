@@ -8,9 +8,13 @@ class Graph extends React.Component {
 	}
 
 	render() {
-		console.log(Bar, 'Bar')
 		return (
-			<Bar data={['1', '2', '3']} width={400} height={400}/>
+			<div className='graph-container'>
+				<div className="panel panel-default">
+					<div className="panel-heading"><h5>Graph Title</h5></div>
+					<Bar data={['1', '2', '3']} width={400} height={400}/>
+				</div>
+			</div>
 		)
 	}
 }

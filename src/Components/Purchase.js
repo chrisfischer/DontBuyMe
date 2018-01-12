@@ -5,13 +5,8 @@ class Purchase extends Component {
 // Everything needs to be inside the "App" div
   render() {
     return (
-		<tbody>
-		      <tr className="Purchase">
-		        <td>{this.props.purchase.date}</td>
-				<td>{this.props.purchase.vendor}</td>
-				<td>{this.props.purchase.price}</td>
-		      </tr>
-		</tbody>
+        <a href="#" className="list-group-item">{this.props.purchase.date} - <strong>{this.props.purchase.vendor}</strong> - {this.props.purchase.price}</a>
+
     );
   }
 }
