@@ -15,6 +15,7 @@
 		61C2116620087B0F007C9359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C2116420087B0F007C9359 /* LaunchScreen.storyboard */; };
 		61C2117120087B0F007C9359 /* DontBuyMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C2117020087B0F007C9359 /* DontBuyMeTests.swift */; };
 		61C2117C20087B0F007C9359 /* DontBuyMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C2117B20087B0F007C9359 /* DontBuyMeUITests.swift */; };
+		61C2118A20089A08007C9359 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C2118920089A08007C9359 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		61C2117720087B0F007C9359 /* DontBuyMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DontBuyMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C2117B20087B0F007C9359 /* DontBuyMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontBuyMeUITests.swift; sourceTree = "<group>"; };
 		61C2117D20087B0F007C9359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61C2118920089A08007C9359 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				61C2115820087B0F007C9359 /* AppDelegate.swift */,
 				61C2115A20087B0F007C9359 /* ViewController.swift */,
 				61C2115C20087B0F007C9359 /* Main.storyboard */,
+				61C2118920089A08007C9359 /* InfoViewController.swift */,
 				61C2116220087B0F007C9359 /* Assets.xcassets */,
 				61C2116420087B0F007C9359 /* LaunchScreen.storyboard */,
 				61C2116720087B0F007C9359 /* Info.plist */,
@@ -264,6 +267,7 @@
 			files = (
 				61C2115B20087B0F007C9359 /* ViewController.swift in Sources */,
 				61C2115920087B0F007C9359 /* AppDelegate.swift in Sources */,
+				61C2118A20089A08007C9359 /* InfoViewController.swift in Sources */,
 				61C2116120087B0F007C9359 /* DontBuyMe.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

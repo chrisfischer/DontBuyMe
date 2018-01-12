@@ -19,7 +19,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         costField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        view.addGestureRecognizer(tap)
     }
+    
+    @objc func handleTap(_ recognizer:UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
