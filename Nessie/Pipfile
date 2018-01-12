@@ -5,8 +5,23 @@ verify_ssl = true
 name = "pypi"
 
 
-[dev-packages]
+[requires]
 
+python_version = "3.6"
 
 
 [packages]
+
+certifi = "*"
+chardet = "*"
+Django = "*"
+django-cors-header = "*"
+gunicorn = "*"
+idna = "*"
+pymongo = "*"
+pytz = "*"
+requests = "*"
+urllib3 = "*"
+
+[dev-packages]
+

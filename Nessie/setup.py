@@ -1,5 +1,6 @@
 from bson.json_util import dumps
 from pymongo import MongoClient
+import random
 
 client = MongoClient("mongodb://admin:password1@ds251287.mlab.com:51287/heroku_x5rvthjk")
 db = client.get_default_database()
@@ -57,38 +58,18 @@ for post in cursor:
     print(post)
 '''
 
-purchase_history = [
-    {
-      'date': '2017-12-04',
-      'vendor': 'STARBUCKS',
-      'price': '21.12'
-    },
-    {
-      'date': '2017-12-04',
-      'vendor': 'GREENBURG MULTIPLEX',
-      'price': '13.23'
-    },
-    {
-      'date': '2017-12-06',
-      'vendor': 'UBER',
-      'price': '54.40'
-    },
-    {
-      'date': '2017-12-12',
-      'vendor': 'AMAZON.COM',
-      'price': '120.64'
-    },
-    {
-      'date': '2017-12-14',
-      'vendor': 'NETFLIX',
-      'price': '9.99'
-    },
-    {
-      'date': '2017-12-16',
-      'vendor': 'KAPNOS TAVERNA',
-      'price': '98.39'
-    },
-]
-
 purchases = db['purchase-history']
-purchases.insert(purchase_history)
+for month in range(12, 13):
+  for i in range(1, 9):
+    price = random.randint(1000,7000) / 100.00
+
+    purchases.insert({
+      'date': '2016-' + str(month).zfill(2) + '-' + str(i),
+      'vendor': 'VENDOR',
+      'price': price
+      })
+
+'''
+purchases = db['purchase-history']
+purchases.remove({'vendor':'VENDOR'})
+'''
