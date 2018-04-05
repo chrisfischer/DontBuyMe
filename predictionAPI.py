@@ -16,7 +16,7 @@ def findCostMarketInvestment(cost, timeReference, determinantFundData, balance, 
     days = int(timeReference)
 
     beforeInterest = getInterest(balance, interest, payment)
-    afterInterest = getInterest(balance+itemCost, interest, payment)
+    afterInterest = getInterest(balance+cost, interest, payment)
     netInterest = afterInterest-beforeInterest
     with open(determinantFundData, 'r',encoding="utf8") as listing_file:
 
